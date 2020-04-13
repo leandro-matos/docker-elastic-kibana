@@ -189,7 +189,9 @@ services:
     networks:
       - elastic
       - ingress
+
   auditbeat:
+    user: root
     image: docker.elastic.co/beats/auditbeat:7.6.0
     command: auditbeat -e -strict.perms=false
     user: root
@@ -199,10 +201,11 @@ services:
     cap_add: ['AUDIT_CONTROL', 'AUDIT_READ']
     pid: "host"
     volumes:
-    # - ${PWD}/configs/auditbeat.docker.yml:/usr/share/auditbeat/auditbeat.yml
+      - ./config/beats/auditbeat/auditbeat.yml:/usr/share/auditbeat/auditbeat.yml
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - elastic
+    restart: on-failure
 
   metricbeat:
     user: root
@@ -215,8 +218,8 @@ services:
       - AUDIT_CONTROL
       - AUDIT_READ
     volumes:
-      - ./config/metricbeat.docker.yml:/usr/share/metricbeat/metricbeat.yml
-      - ./config/modules.d/:/usr/share/metricbeat/modules.d/
+      - ./config/beats/metricbeat/metricbeat.docker.yml:/usr/share/metricbeat/metricbeat.yml
+      - ./config/beats/modules.d/:/usr/share/metricbeat/modules.d/
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro
       - /proc:/hostfs/proc:ro
@@ -226,17 +229,20 @@ services:
     restart: on-failure
   
   heartbeat:
+    user: root
     image: docker.elastic.co/beats/heartbeat:7.6.0
     command: --strict.perms=false
     environment:
       - setup.kibana.host=kibana:5601
       - output.elasticsearch.hosts=["elasticsearch:9200"]
     # volumes:
-    #   - ${PWD}/configs/heartbeat.docker.yml:/usr/share/heartbeat/heartbeat.yml
+      - ./config/beats/heartbeat/heartbeat.yml:/usr/share/heartbeat/heartbeat.yml
     networks:
       - elastic
+    restart: on-failure
 
   packetbeat:
+    user: root
     image: docker.elastic.co/beats/packetbeat:7.6.0
     command: --strict.perms=false
     environment:
@@ -246,11 +252,14 @@ services:
       - NET_RAW
       - NET_ADMIN
     # volumes:
-    #   - ${PWD}/configs/packetbeat.docker.yml:/usr/share/packetbeat/packetbeat.yml
+       - ./config/beats/packetbeat/packetbeat.yml:/usr/share/packetbeat/packetbeat.yml
+       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - elastic
+    restart: on-failure
 
   filebeat:
+    user: root
     image: docker.elastic.co/beats/filebeat:7.6.0
     command: --strict.perms=false
     environment:
@@ -259,11 +268,16 @@ services:
     ports:
       - 9000:9000
     volumes:
-      # - ${PWD}/configs/filebeat.docker.yml:/usr/share/filebeat/filebeat.yml
+      - ./config/beats/filebeat/filebeat.docker.yml:/usr/share/filebeat/filebeat.yml
+      - ./config/beats/filebeat/prospectors.d/:/usr/share/filebeat/prospectors.d/
+      - ./logs/nginx/:/var/log/nginx/
+      - /private/var/log/:/var/log/host/:ro
+      - filebeatdata:/usr/share/filebeat/data/
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - elastic
+    restart: on-failure
 
   apmserver:
     image: docker.elastic.co/apm/apm-server:7.6.0
@@ -279,6 +293,7 @@ services:
     #   - ${PWD}/configs/apm-server.yml:/usr/share/apm-server/apm-server.yml
     networks:
         - elastic
+ 
   app-search:
     image: docker.elastic.co/app-search/app-search:7.6.0
     ports:

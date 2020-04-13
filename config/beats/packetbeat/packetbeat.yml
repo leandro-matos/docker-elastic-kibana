@@ -35,12 +35,12 @@ monitoring.enabled: true
 
 
 output.elasticsearch:
-  hosts: ["localhost:9200"] #Needs to use localhost, since we are on a different network
+  hosts: ["elastic:9200"] #Needs to use localhost, since we are on a different network
 
 
 logging.to_files: false
 
 
 setup:
-  kibana.host: "localhost:5601" #Needs to use localhost, since we are on a different network
+  kibana.host: "kibana:5601" #Needs to use localhost, since we are on a different network
   dashboards.enabled: true

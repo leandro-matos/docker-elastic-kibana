@@ -27,7 +27,7 @@ A criação de uma máquina com a seguinte configuração é mais que suficiente
 Aumentar a memória Virtual, conforme a documentação oficial da Elastic: https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html
 
 ```
-Sudo sysctl -w vm.max_map_count=262144 
+sudo sysctl -w vm.max_map_count=262144 
 ```
 A recomedação é editar o arquivo de configuração /etc/sysctl.conf e incluindo os paramêtros de forma permanente.
 

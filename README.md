@@ -81,5 +81,5 @@ sudo docker-compose logs -f
 ```
 docker-compose ps -a
 ```
-![](images/docker-ps.png)
+![](images/docker-ps.PNG)
 

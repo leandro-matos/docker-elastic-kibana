@@ -282,6 +282,7 @@ services:
       allow_es_settings_modification: "true"
     networks:
         - elastic
+    restart: on-failure
 
   nginx:
     container_name: nginx

@@ -1,12 +1,10 @@
 #We monitor any devices on the host OS. For OSX this is the VM hosting Docker.
 packetbeat.interfaces.device: any
 
-
 packetbeat.flows:
   enabled: true
   timeout: 30s
   period: 10s
-
 
 packetbeat.protocols:
 
@@ -26,20 +24,15 @@ packetbeat.protocols:
   send_response: false
   transaction_timeout: 10s
 
-
 processors:
 - add_docker_metadata: ~
 
-
 monitoring.enabled: true
-
 
 output.elasticsearch:
   hosts: ["elastic:9200"] #Needs to use localhost, since we are on a different network
 
-
 logging.to_files: false
-
 
 setup:
   kibana.host: "kibana:5601" #Needs to use localhost, since we are on a different network

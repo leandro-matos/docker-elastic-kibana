@@ -98,7 +98,7 @@ http://seuhost:5601 ou curl http://localhost:9200/_nodes?pretty=true via linha d
 ### Validando se o Kibana está rodando
 ![](images/kibana.PNG)
 
-### Acessando o Kibana pelo Ngninx
+### Acessando o Kibana pelo Nginx
 ```
 http://seuhost:8081
 ```
@@ -108,7 +108,13 @@ http://seuhost:8081
 http://seuhost:9200
 ```
 ### Validando se o ElasticSearch está rodando
+
+#### Via comando
 ![](images/cluster-elastic.PNG)
+
+#### Via Web
+![](images/elastic.PNG)
+
 
 Dashboards criados automaticamente pelos Beats, o arquivo de configuração está dentro da pasta /config
 

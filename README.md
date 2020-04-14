@@ -2,13 +2,13 @@
 * **Criado por:** Leandro de Matos Pereira<br>
 * **Última atualização:** 13.04.2020
 
-Nesse repositório estarão dispostos os arquivos necessários para configuração do ambiente, lembrando que utilizei esse ambiente usando um EC2 da AWS, no entanto é possível replicar em qualquer um dos Cloud Providers ou até mesmo por meio do VirtualBox utilizando o Vagrant para provisionar as máquinas.
+Nesse repositório estão dispostos os arquivos necessários para configuração do ambiente, lembrando que utilizei esse ambiente usando um EC2 da AWS, no entanto é possível replicar em qualquer um dos Cloud Providers ou até mesmo por meio do VirtualBox utilizando o Vagrant para provisionar as máquinas.
 
-Nesse tutorial, vamos fazer uma instalação usando Docker, o que deixa o processo muito mais rápido e como nosso foco será mais na utilização do que na configuração da infra, acredito ser a melhor opção.
+Nesse tutorial, a instalação é feita usando o Docker, no entanto é possível fazer a instalação individual nas máquinas apenas baixando o binário de instalação, no entanto optei pela opção via containers, o que deixa o processo muito mais rápido.
 
 ### Configuração do servidor:
 
-A criação de uma máquina com a seguinte configuração é mais que suficiente para testes no ambiente. Uma máquina Linux com 2VCPU, 08GB de RAM e 20GB de disco, equivalente ao tipo t2.large
+A criação de uma máquina com a seguinte configuração é mais que suficiente para testes no ambiente. Uma máquina Linux com 2VCPU, 08GB de RAM e 20GB de disco, equivalente ao tipo t2.large, também é possível utilizar a t2.medium, o SO fica um pouco mais lento durante o seu uso.
 
 ### Overview:
 
@@ -110,20 +110,20 @@ http://seuhost:9200
 ### Validando se o ElasticSearch está rodando
 ![](images/cluster-elastic.PNG)
 
-### Dashboards criados automaticamente pelos Beats, o arquivo de configuração está dentro da pasta /config
+Dashboards criados automaticamente pelos Beats, o arquivo de configuração está dentro da pasta /config
 
-Metricbeat:
+##Metricbeat:
 ![](images/metricbeat.PNG)
 
-Metricbeat:
+##Metricbeat:
 ![](images/metrics.PNG)
 
-Packetbeat:
+##Packetbeat:
 ![](images/packetbeat.PNG)
 
-Heartbeat:
+##Heartbeat:
 ![](images/heartbeat.PNG)
 
-# **Resources**
+# **Links Úteis**
 * [Documentação Oficial](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
 * [Treinamentos Elastic](https://training.elastic.co/)

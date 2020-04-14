@@ -61,7 +61,7 @@ git clone https://github.com/leandro-matos/docker-elastic-kibana.git
 ```
 Entre dentro do diretório baixado:
 ```
-cd docker-elastic-kibana.git
+cd docker-elastic-kibana
 ```
 
 ## Como fazer a execução.
@@ -76,3 +76,10 @@ Podemos acompanhar os logs de inicialização de cada serviço com o comando aba
 ```
 sudo docker-compose logs -f
 ```
+
+## Checando o status dos containers
+```
+docker-compose ps -a
+```
+![](images/docker-ps.png)
+

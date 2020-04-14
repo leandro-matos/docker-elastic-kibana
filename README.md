@@ -6,11 +6,11 @@ Nesse repositório estarão dispostos os arquivos necessários para configuraç�
 
 Nesse tutorial, vamos fazer uma instalação usando Docker, o que deixa o processo muito mais rápido e como nosso foco será mais na utilização do que na configuração da infra, acredito ser a melhor opção.
 
-## Configuração do servidor:
+### Configuração do servidor:
 
 A criação de uma máquina com a seguinte configuração é mais que suficiente para testes no ambiente. Uma máquina Linux com 2VCPU, 08GB de RAM e 20GB de disco, equivalente ao tipo t2.large
 
-## Overview:
+### Overview:
 
 *	3 Node Elasticsearch para a formação do Cluster
 *	Kibana version
@@ -22,7 +22,7 @@ A criação de uma máquina com a seguinte configuração é mais que suficiente
 *	APM Search
 *	NGINX
 
-## Instalando e configurando os recursos do SO:
+### Instalando e configurando os recursos do SO:
 
 Aumentar a memória Virtual, conforme a documentação oficial da Elastic: https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html
 
@@ -85,21 +85,30 @@ docker-compose ps -a
 
 ## **Acesso ao Kibana**
 ```
-http://seuhost:5601
+http://seuhost:5601 ou curl http://localhost:9200/_nodes?pretty=true via linha de comando
 ```
 
 ## **Validando se o Kibana está rodando**
 ![](images/kibana.PNG)
 
-### **Acessando o Kibana pelo Ngninx**
+## **Acessando o Kibana pelo Ngninx**
 ```
 http://seuhost:8081
 ```
 
-### **Acessando o ElasticSearch**
+## **Acessando o ElasticSearch**
 ```
 http://seuhost:9200
 ```
 ## **Validando se o ElasticSearch está rodando**
-![](images/elasticsearch.PNG)
+![](images/cluster-elastic.PNG)
 
+## **Dashboards criados automaticamente pelos Beats, o arquivo de configuração está dentro da pasta /config**
+
+![](images/metricbeat.PNG)
+
+![](images/metrics.PNG)
+
+![](images/packetbeat.PNG)
+
+![](images/heartbeat.PNG)

@@ -70,6 +70,13 @@ Com o docker e o docker-compose instalados (no meu caso num Linux) basta baixar 
 ```
 sudo docker-compose up -d
 ```
+
+## Como parar a execução.
+Para remover os containers, assim como as respectivas configurações, basta executar o comando abaixo:
+
+```
+sudo docker-compose up -d
+```
   
 ## Monitorando o start dos serviços:
 Podemos acompanhar os logs de inicialização de cada serviço com o comando abaixo:
@@ -77,33 +84,33 @@ Podemos acompanhar os logs de inicialização de cada serviço com o comando aba
 sudo docker-compose logs -f
 ```
 
-## Checando o status dos containers
+### Checando o status dos containers
 ```
 docker-compose ps -a
 ```
 ![](images/docker-ps.PNG)
 
-## Acesso ao Kibana
+### Acesso ao Kibana
 ```
 http://seuhost:5601 ou curl http://localhost:9200/_nodes?pretty=true via linha de comando
 ```
 
-## Validando se o Kibana está rodando
+### Validando se o Kibana está rodando
 ![](images/kibana.PNG)
 
-## Acessando o Kibana pelo Ngninx
+### Acessando o Kibana pelo Ngninx
 ```
 http://seuhost:8081
 ```
 
-## Acessando o ElasticSearch
+### Acessando o ElasticSearch
 ```
 http://seuhost:9200
 ```
-## Validando se o ElasticSearch está rodando
+### Validando se o ElasticSearch está rodando
 ![](images/cluster-elastic.PNG)
 
-## Dashboards criados automaticamente pelos Beats, o arquivo de configuração está dentro da pasta /config
+### Dashboards criados automaticamente pelos Beats, o arquivo de configuração está dentro da pasta /config
 
 ![](images/metricbeat.PNG)
 

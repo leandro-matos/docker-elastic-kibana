@@ -54,7 +54,7 @@ docker -v
 docker-compose -version
 ```
 
-## Baixando esse repositório via Git:
+### Baixando esse repositório via Git:
 Para baixar o repositorio com o compose digite o comando abaixo:
 ```
 git clone https://github.com/leandro-matos/docker-elastic-kibana.git
@@ -64,27 +64,27 @@ Entre dentro do diretório baixado:
 cd docker-elastic-kibana
 ```
 
-## Como fazer a execução.
+### Como fazer a execução.
 Com o docker e o docker-compose instalados (no meu caso num Linux) basta baixar esse conteudo via ```git clone``` e entrando na pasta baixada rodar o comando abaixo:
 
 ```
 sudo docker-compose up -d
 ```
 
-## Como parar a execução.
+### Como parar a execução.
 Para remover os containers, assim como as respectivas configurações, basta executar o comando abaixo:
 
 ```
 sudo docker-compose up -d
 ```
   
-## Monitorando o start dos serviços:
+### Monitorando o start dos serviços:
 Podemos acompanhar os logs de inicialização de cada serviço com o comando abaixo:
 ```
 sudo docker-compose logs -f
 ```
 
-### Checando o status dos containers
+#### Checando o status dos containers
 ```
 docker-compose ps -a
 ```
@@ -112,10 +112,18 @@ http://seuhost:9200
 
 ### Dashboards criados automaticamente pelos Beats, o arquivo de configuração está dentro da pasta /config
 
+Metricbeat:
 ![](images/metricbeat.PNG)
 
+Metricbeat:
 ![](images/metrics.PNG)
 
+Packetbeat:
 ![](images/packetbeat.PNG)
 
+Heartbeat:
 ![](images/heartbeat.PNG)
+
+# **Resources**
+* [Documentação Oficial](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
+* [Treinamentos Elastic](https://training.elastic.co/)

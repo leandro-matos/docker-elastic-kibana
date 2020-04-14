@@ -1,6 +1,6 @@
 # Elastic Stack on Docker
 * **Criado por:** Leandro de Matos Pereira<br>
-* **Última atualização:** 13.04.2020
+* **Última atualização:** 14.04.2020
 
 Nesse repositório estão dispostos os arquivos necessários para configuração do ambiente, lembrando que utilizei esse ambiente usando um EC2 da AWS, no entanto é possível replicar em qualquer um dos Cloud Providers ou até mesmo por meio do VirtualBox utilizando o Vagrant para provisionar as máquinas.
 
@@ -12,15 +12,15 @@ A criação de uma máquina com a seguinte configuração é mais que suficiente
 
 ### Overview do ambiente criado:
 
-*	3 Node Elasticsearch para a formação do Cluster
-*	Kibana version
-*	Audit Beat version
-*	MetricBeat version
-*	HeartBeat version
-*	Packet Beat version
-*	APM Server version
-*	APM Search
-*	NGINX
+*	3 Node Elasticsearch para a formação do Cluster 7.6.0
+*	Kibana version 7.6.0
+*	Audit Beat version 7.6.0
+*	MetricBeat version 7.6.0
+*	HeartBeat version 7.6.0
+*	PacketBeat version 7.6.0
+*	APM Server version 7.6.0
+*	APM Search 7.6.0
+*	NGINX 7.6.0
 
 ### Instalando e configurando os recursos do SO:
 

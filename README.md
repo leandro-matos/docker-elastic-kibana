@@ -120,6 +120,8 @@ curl http://localhost:9200/_nodes?pretty=true
 ![](images/elastic.PNG)
 
 
+### Dashboards
+
 Exemplo de Dashboards criados automaticamente pelos Beats, o arquivo de configuração está dentro da pasta /config. 
 
 Vale salientar que é possível modificar tais configurações, basta consultar a documentação da elastic para mais detalhes:

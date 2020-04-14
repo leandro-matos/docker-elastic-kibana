@@ -133,9 +133,7 @@ Dashboards criados automaticamente pelos Beats, o arquivo de configuração est�
 ### Heartbeat:
 ![](images/heartbeat.PNG)
 
-### AppSearch:
-![](images/app-search.PNG)
-
 # **Links Úteis**
 * [Documentação Oficial](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
 * [Treinamentos Elastic](https://training.elastic.co/)
+* [Open Distro Elasticsearch](https://medium.com/@maxy_ermayank/tl-dr-aws-open-distro-elasticsearch-fc642f0e592a)

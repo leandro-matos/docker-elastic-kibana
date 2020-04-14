@@ -84,7 +84,7 @@ Podemos acompanhar os logs de inicialização de cada serviço com o comando aba
 sudo docker-compose logs -f
 ```
 
-#### Checando o status dos containers
+### Checando o status dos containers
 ```
 docker-compose ps -a
 ```
@@ -112,13 +112,13 @@ http://seuhost:9200
 
 Dashboards criados automaticamente pelos Beats, o arquivo de configuração está dentro da pasta /config
 
-##Metricbeat:
+## Metricbeat:
 ![](images/metricbeat.PNG)
 
-##Metricbeat:
+## Metricbeat:
 ![](images/metrics.PNG)
 
-##Packetbeat:
+## Packetbeat:
 ![](images/packetbeat.PNG)
 
 ##Heartbeat:

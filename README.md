@@ -24,12 +24,25 @@ A criação de uma máquina com a seguinte configuração é mais que suficiente
 
 ## Instalando e configurando os recursos do SO:
 
-* Aumentar a memória Virtual, conforme a documentação oficial da Elastic: https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html
-```
-Sudo sysctl -w vm.max_map_count=262144 ou editando a configuração de forma permanente no arquivo: /etc/sysctl.conf
-```
+Aumentar a memória Virtual, conforme a documentação oficial da Elastic: https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html
 
-* Instalação do Docker, conforme a documentação oficial do Docker: https://github.com/docker/docker-install
+```
+Sudo sysctl -w vm.max_map_count=262144 
+```
+A recomedação é editar o arquivo de configuração /etc/sysctl.conf e incluindo os paramêtros de forma permanente.
+
+
+Instalação do Docker, conforme a documentação oficial do Docker: https://github.com/docker/docker-install
+
 ```
 curl -fsSL https://get.docker.com | sh
+```
+
+Instalação do Docker-Compose, segundo a documentação oficial da Docker: https://docs.docker.com/compose/install/
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
 ```

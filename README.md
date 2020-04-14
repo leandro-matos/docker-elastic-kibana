@@ -112,16 +112,16 @@ http://seuhost:9200
 
 Dashboards criados automaticamente pelos Beats, o arquivo de configuração está dentro da pasta /config
 
-## Metricbeat:
+### Metricbeat:
 ![](images/metricbeat.PNG)
 
-## Metricbeat:
+### Metricbeat:
 ![](images/metrics.PNG)
 
-## Packetbeat:
+### Packetbeat:
 ![](images/packetbeat.PNG)
 
-##Heartbeat:
+### Heartbeat:
 ![](images/heartbeat.PNG)
 
 # **Links Úteis**

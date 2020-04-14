@@ -46,3 +46,33 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 ```
+
+Com tudo instalado validamos o docker e o docker-compose:
+
+```
+docker -v
+docker-compose -version
+```
+
+## Baixando esse repositório via Git:
+Para baixar o repositorio com o compose digite o comando abaixo:
+```
+git clone https://github.com/leandro-matos/docker-elastic-kibana.git
+```
+Entre dentro do diretório baixado:
+```
+cd docker-elastic-kibana.git
+```
+
+## Como fazer a execução.
+Com o docker e o docker-compose instalados (no meu caso num Linux) basta baixar esse conteudo via ```git clone``` e entrando na pasta baixada rodar o comando abaixo:
+
+```
+sudo docker-compose up -d
+```
+  
+## Monitorando o start dos serviços:
+Podemos acompanhar os logs de inicialização de cada serviço com o comando abaixo:
+```
+sudo docker-compose logs -f
+```

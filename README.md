@@ -83,3 +83,23 @@ docker-compose ps -a
 ```
 ![](images/docker-ps.PNG)
 
+## **Acesso ao Kibana**
+```
+http://seuhost:5601
+```
+
+## **Validando se o Kibana está rodando**
+![](images/kibana.PNG)
+
+### **Acessando o Kibana pelo Ngninx**
+```
+http://seuhost:8081
+```
+
+### **Acessando o ElasticSearch**
+```
+http://seuhost:9200
+```
+## **Validando se o ElasticSearch está rodando**
+![](images/elasticsearch.PNG)
+

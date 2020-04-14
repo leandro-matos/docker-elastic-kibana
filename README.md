@@ -124,11 +124,17 @@ Dashboards criados automaticamente pelos Beats, o arquivo de configuração est�
 ### Metricbeat:
 ![](images/metrics.PNG)
 
+### Auditbeat:
+![](images/auditbeat-siem.PNG)
+
 ### Packetbeat:
 ![](images/packetbeat.PNG)
 
 ### Heartbeat:
 ![](images/heartbeat.PNG)
+
+### AppSearch:
+![](images/app-search.PNG)
 
 # **Links Úteis**
 * [Documentação Oficial](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)

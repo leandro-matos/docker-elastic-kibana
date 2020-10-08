@@ -76,7 +76,7 @@ sudo docker-compose up -d
 Para remover os containers, assim como as respectivas configurações, basta executar o comando abaixo:
 
 ```
-sudo docker-compose up -d
+sudo docker-compose down -d
 ```
   
 ### Monitorando o start dos serviços:
